@@ -102,6 +102,10 @@ section#section--customer {
   max-width:500px;
   margin-top:-30px;
 
+    @include breakpoint(xs-sm) {
+    margin-top: 100px;
+  }
+
 }
 
 
@@ -111,7 +115,23 @@ section#section--customer {
 
 
 section.section.section--home.section--viewport.section--centered-content {
-  @include breakpoint(xs-sm) {
-    margin-top: 10%;
-  }
+
+}
+
+
+.bank__inside.visible-xs.square-button.dashed.small-text-strong {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.customer__graph__col--right {
+  overflow:initial;
+}
+
+.mt-medium {
+    margin-top: 15px!important;
+}
+
+a.button.button--inline.blank-link {
+    padding: 15px 25px;
 }
