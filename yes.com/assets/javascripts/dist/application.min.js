@@ -642,16 +642,16 @@ $(function() {
       'white',
       'white',
       'white',
-      // 'aliceblue',
-      // 'bisque',
-      // 'ghostwhite',
-      // 'honeydew',
-      // 'lavender',
-      // 'lavenderblush',
+      'aliceblue',
+      'bisque',
+      'ghostwhite',
+      'honeydew',
+      'lavender',
+      'lavenderblush',
       // 'lightgreen',
       // 'lightgray',
-      // 'lightblue',
-      // 'lightred'
+      'lightblue',
+      'lightred'
 
       // 'lightcoral',
       // 'palegreen'
