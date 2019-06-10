@@ -1,0 +1,41 @@
+@mixin link-hover {
+  text-decoration: underline;
+}
+
+@mixin link-active {
+  text-decoration: underline;
+}
+.link-active { @include link-active; }
+
+@mixin blank-link {
+  text-decoration: none;
+  color: inherit;
+}
+.blank-link { @include blank-link; }
+
+@mixin blank-link-hover {
+  @include blank-link;
+
+  &:hover {
+    @include breakpoint(sm) {
+      @include link-hover;
+    }
+  }
+}
+.blank-link-hover { @include blank-link-hover; }
+
+@mixin default-link {
+  @include link-active;
+  color: inherit;
+
+  &:hover {
+    @include breakpoint(sm) {
+      opacity: 0.6;
+    }
+  }
+}
+.default-link { @include default-link; }
+
+.external-link {
+  cursor: alias;
+}
