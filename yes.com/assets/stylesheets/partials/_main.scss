@@ -150,6 +150,12 @@ a.button.button--inline.blank-link {
     margin-bottom: 100px!important;
 }
 
+.apps-websites__graph {
+  @include breakpoint(xs-sm) {
+    margin-top: 70px;
+  }
+}
+
 .sp-logo{
   background-image: url(assets/images/bank-icon-1@4x.png);
       display: inline-block;
