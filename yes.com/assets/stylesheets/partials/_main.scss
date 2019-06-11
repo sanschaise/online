@@ -201,10 +201,23 @@ a.button.button--inline.blank-link {
 }
 
 
+.footer__col{
+   @include breakpoint(xs-sm) {
+    padding-bottom:50px;
+   }
+
+}
+
 .footer__col--left {
     @include breakpoint(xs-sm) {
     padding-top:150px;
     padding-bottom:150px;
   }
     
+}
+
+
+
+.star__label.small-text-strong {
+    margin-top: 0px;
 }
