@@ -216,8 +216,17 @@ a.button.button--inline.blank-link {
     
 }
 
-
+.footer__address {
+  line-height:1.7;
+}
 
 .star__label.small-text-strong {
     margin-top: 0px;
+}
+
+
+
+.home__intro.home__intro--styleguide.text-center.mb-medium.small-text-strong-xs {
+    font-size: inherit;
+    margin-top: -35px;
 }
