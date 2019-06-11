@@ -199,3 +199,11 @@ a.button.button--inline.blank-link {
     padding-bottom: 10px;
     border-width: 1px;
 }
+
+
+.footer__col--left {
+    @include breakpoint(xs-sm) {
+    height: 300px;
+  }
+    
+}
