@@ -203,7 +203,8 @@ a.button.button--inline.blank-link {
 
 .footer__col--left {
     @include breakpoint(xs-sm) {
-    height: 600px;
+    padding-top:150px;
+    padding-bottom:150px;
   }
     
 }
