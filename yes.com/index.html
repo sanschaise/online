@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="style.css?v=9" type="text/css">
   <script src="assets/javascripts/lib/modernizr.js"></script>
 </head>
-<body class="is-viewing-color-picker">
+<body>
 
 
   <header id="header" class="header">
@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <div id="header__palette" class="header__palette text-center" data-swatch-parent>
+    <div id="header__palette" class="header__palette text-center " data-swatch-parent>
       <div class="header__palette__swatches">
         <div class="header__palette__swatch header__palette__swatch--reset" data-swatch-reset></div>
         <div class="header__palette__swatch header__palette__swatch--preset-bank-1" data-preset-swatch="bank1"></div>
@@ -108,7 +108,7 @@
       </div> -->
       <div id="jumbo-button" class="button button--wide button--super-jumbo mt-medium yes-button" >yes<sup>®</sup></div>
       <!-- jumbo button -->
-      <div id="home__palette" class="home__palette text-center visible-xs" data-swatch-parent>
+      <div id="home__palette" class="home__palette text-center" data-swatch-parent>
         <div class="home__palette__swatches">
           <div class="home__palette__swatch home__palette__swatch--reset" data-swatch-reset></div>
           <div class="home__palette__swatch home__palette__swatch--preset-bank-1" data-preset-swatch="bank1"></div>
@@ -119,7 +119,9 @@
           <img id="home__palette__refresh" class="home__palette__refresh" data-swatch-refresh src="assets/images/refresh.svg" alt="Click the icon to refresh the color palette options.">
         </div>
         <div class="home__palette__description small-text-strong">
-          yes<sup>®</sup> We look like you. Use your own CSS and check out the <a href="styleguide.html">styleguide.</a>
+           The Open Ecosystem for
+             <a href="#section--bank" class="default-link">banks</a>, 
+             <a href="#section--apps-website" class="default-link">apps and websites</a> and their <a href="#section--customer">customers</a>. We <a href="styleguide.html" > look</a> like you.
         </div>
       </div>
       <img id="home__carrot" class="home__carrot" src="assets/images/carrot-down.svg" alt="Click the carrot to scroll down the page.">
@@ -221,9 +223,10 @@
                   </div>
                 </div>
                 <div data-typewriter-set data-typewriter-complete>
-                  <div class="down-arrow"></div>
+                  <div class="down-line"></div>
                   <div class="star">
            <!--          <img class="star__image" src="assets/images/star.svg"> -->
+           <br>
                     <div class="star__label small-text-strong">Mortgage!</div>
                   </div>
                 </div>
@@ -245,11 +248,12 @@
                     <div class="button yes-button">yes<sup>®</sup></div>
                     <img src="assets/images/mouse@2x.png" class="mouse-cursor">
                   </div>
-                  <div class="down-arrow"></div>
+                  <div class="down-line"></div>
                 </div>
                 <div class="customer__graph__col--right__scene__item">
                   <div class="star">
       <!--               <img class="star__image" src="assets/images/star.svg"> -->
+      <br>
                     <div class="star__label small-text-strong">Mortgage!</div>
                   </div>
                 </div>
@@ -289,14 +293,15 @@
             <div id="bank__graph" class="bank__graph">
               <div class="bank__graph__col bank__graph__col--left bank__graph__col__scene-item-wrapper">
                 <div>Normally</div>
-                <div class="down-line"></div>
+                <br>
+               <!--  <div class="down-line"></div> -->
                 <div class="bank__graph__col__scene-item">
                   <div class="button rounded small-text-strong">Customer</div>
                   <div class="down-arrow"></div>
                 </div>
                 <div class="bank__graph__col__scene-item">
                   <div class="bank__third-party-services">
-                    <div class="square-button small-text-strong">Third Party Service    <div class="bank__inside visible-xs  dashed small-text-strong">
+                    <div class="square-button small-text-strong">Aggregator   <div class="bank__inside visible-xs  dashed small-text-strong">
                         Bank
                       </div></div>
                  
@@ -308,7 +313,7 @@
                   </div>
                   <div class="down-arrow"></div>
                 </div>
-                <div class="bank__graph__col__scene-item">
+ <!--                <div class="bank__graph__col__scene-item">
                   <div class="square-button small-text-strong">Aggregation</div>
                   <div class="down-arrow"></div>
                 </div>
@@ -323,17 +328,19 @@
                 <div class="bank__graph__col__scene-item">
                   <div class="square-button small-text-strong">QTSB</div>
                   <div class="down-arrow"></div>
-                </div>
+                </div> -->
                 <div class="bank__graph__col__scene-item bank__graph__col__scene-item--last">
                   <div class="star">
                     <!-- <img class="star__image" src="assets/images/star.svg"> -->
-                    <div class="star__label small-text-strong">App or website!</div>
+        <!--             <div class="star__label small-text-strong">App or website!</div> -->
+                    <div class="button rounded small-text-strong">Merchant</div>
                   </div>
                 </div>
               </div>
               <div class="bank__graph__col bank__graph__col--right bank__graph__col__scene-item-wrapper">
                 <div>with yes<sup>®</sup></div>
-                <div class="down-line"></div>
+                <br>
+                <!-- <div class="down-line"></div> -->
                 <div class="bank__graph__col__scene-item">
                   <div class="button rounded small-text-strong">Customer</div>
                   <div class="down-arrow"></div>
@@ -345,7 +352,8 @@
                 <div class="bank__graph__col__scene-item bank__graph__col__scene-item--last">
                   <div class="star">
         <!--             <img class="star__image" src="assets/images/star.svg"> -->
-                    <div class="star__label small-text-strong">App or website!</div>
+        <div class="button rounded small-text-strong">Merchant</div>
+               <!--      <div class="star__label small-text-strong">App or website!</div> -->
                   </div>
                 </div>
               </div>

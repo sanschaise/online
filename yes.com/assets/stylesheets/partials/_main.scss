@@ -110,7 +110,13 @@ section#section--customer {
 
 
 .home__palette {
-    top: 70px !important;
+    margin-bottom: -100px !important;
+    /*top: 30px !important;*/
+top: 70px !important;
+    @include breakpoint(xs-sm) {
+    margin-bottom: 50px !important;
+    
+  }
 }
 
 
@@ -224,9 +230,29 @@ a.button.button--inline.blank-link {
     margin-top: 0px;
 }
 
+.styleguide__section-text.mb-medium.small-text-strong-xs {
+  font-size: inherit;
+}
 
+.button.button--wide.button--jumbo.yes-button.small-text-strong-xs {
+    font-size: inherit;
+}
 
 .home__intro.home__intro--styleguide.text-center.mb-medium.small-text-strong-xs {
     font-size: inherit;
     margin-top: -35px;
+    @include breakpoint(xs-sm) {
+      font-size: inherit;
+
+    }
 }
+
+.header__palette {
+  display: none;
+}
+
+.styleguide__section-text.mb-medium.small-text-strong-xs {
+    font-size: inherit;
+    padding: 15px 40px;
+}
+

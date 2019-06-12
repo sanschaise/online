@@ -1123,6 +1123,7 @@ $(function() {
   var delayBeforeFadeOut = 4000;
   var transitionDuration = 300;
   var transitionTimer;
+  
 
   var isColorPickerTransitioning = function() {
     return App.$body.hasClass('is-transitioning-color-picker');
@@ -1206,7 +1207,7 @@ $(function() {
   }
 
   if ( App.$body.hasClass('is-viewing-color-picker') ) {
-    openColorPicker();
+     openColorPicker();
   } else {
     $(document).off('click.initialHeaderColorPaletteClick');
     if ( transitionTimer ) window.clearTimeout(transitionTimer);
