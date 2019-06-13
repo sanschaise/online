@@ -64,7 +64,8 @@ $(function() {
     if ( backgroundColorOnly || getRandomBool() ) {
       // A plain old background color
       var backgroundColor = getRandomHexColor();
-        styles.borderWidth= '0px';
+        styles.borderWidth= '1.5';
+        styles.borderColor ='rgba(0,0,0,0)'
       if ( lightOrDark( backgroundColor ) == 'dark' ) {
         styles.color = '#ffffff';
       } else {
@@ -155,8 +156,10 @@ $(function() {
 
     if ( getRandomBool() ) {
       styles.borderWidth = getRandomInt(minBorder, 2);
+      styles.borderWidth = 1.5;
     } else {
       styles.borderWidth = getRandomInt(minBorder, 3);
+      styles.borderWidth = 1.5;
     }
 
     styles.borderStyle = 'solid';
@@ -469,13 +472,13 @@ $(function() {
        i_count++;
         $(".header__page-title--home").text(instructions[i_count%instructions.length]);
 
-        
+
         slideshow = setInterval(function(){ 
 
         $("#jumbo-button").trigger('click');
         // alert("Hello"); 
         console.log('switch');
-      }, 3000);
+      }, 5000);
 
 
      
@@ -491,7 +494,7 @@ var slideshow = setInterval(function(){
   $("#jumbo-button").trigger('click');
   // alert("Hello"); 
   console.log('switch');
-}, 3000);
+}, 5000);
 
 
 
