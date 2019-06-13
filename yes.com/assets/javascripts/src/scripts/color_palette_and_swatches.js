@@ -353,6 +353,7 @@ $(function() {
   // When a user clicks a swatch, all styleable elements are applied
   // with that swatch's styles.
   $(document).on('click', '[data-swatch]', function() {
+    stopSideshow()
     var $swatch = $(this);
     var styles = $swatch.data('styles');
 
@@ -366,6 +367,7 @@ $(function() {
 
   // Special case for preset swatches, e.g. to match a brand's styles
   $(document).on('click', '[data-preset-swatch]', function() {
+    stopSideshow()
     var $swatch = $(this);
     var swatchStyleName = $swatch.attr('data-preset-swatch');
     var styles = {};
@@ -469,8 +471,12 @@ $(function() {
      
   });
 
+function stopSideshow() {
+  clearInterval(slideshow);
+}
 
-setInterval(function(){ 
+
+var slideshow = setInterval(function(){ 
 
   $("#jumbo-button").trigger('click');
   // alert("Hello"); 
