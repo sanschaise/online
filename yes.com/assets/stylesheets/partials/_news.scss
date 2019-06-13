@@ -8,16 +8,17 @@
 
 #news{
 	.section{
-		min-height:500px;
-		padding:100px;
+		min-height:300px;
+		padding:60px 20px;
 		
 
 		&:first-of-type{
-			padding-bottom:50px;
+			margin-top: 65px;
 		}
 
 		.title{
 			max-width:400px;
+			font-size:inherit;
 		}
 
 		div{
