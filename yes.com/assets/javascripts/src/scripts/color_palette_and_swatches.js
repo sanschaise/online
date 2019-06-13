@@ -460,9 +460,9 @@ $(function() {
   });
 
   //pedro edit
-  var instructions = [ "Login with your bank.", "Verify ID with your bank.", "Pay with your bank.", "Skip forms with your bank." , "Sign documents with your bank." ];
+  var instructions = [ "Login with your bank", "Verify ID with your bank", "Pay with your bank", "Skip forms with your bank" , "Sign documents with your bank" ];
   var i_count = 0;
-  $(document).on('click', '#jumbo-button', function() {
+  $(document).on('click', '.yes-button', function() {
      var $swatches = $('#header__palette [data-swatch]');
       var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
     
