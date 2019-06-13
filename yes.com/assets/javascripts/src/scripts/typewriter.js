@@ -16,6 +16,8 @@ $(function() {
     // var $cursor = $item.find('.mouse-cursor');
     // var $arrow = $item.find('.down-arrow');
 
+
+
     var animateSceneItem = function($item) {
       var $arrow = $item.find('.down-arrow');
       var $cursor = $item.find('.mouse-cursor');
@@ -44,7 +46,11 @@ $(function() {
 
             $button.css({ transitionDuration: '' });
 
+            console.log($item);
+
+            
             $sceneItems = $sceneItems.not($item);
+
 
             if ( $sceneItems.length ) {
               window.setTimeout(function() {
@@ -52,7 +58,9 @@ $(function() {
               }, 250);
             }
           }, 100);
+
         }, 50);
+        
       });
     };
 

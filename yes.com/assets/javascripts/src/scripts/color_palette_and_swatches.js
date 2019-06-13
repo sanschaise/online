@@ -468,6 +468,21 @@ $(function() {
         $(".header__page-title--home").text(instructions[i_count%instructions.length]);
      
   });
+
+
+setInterval(function(){ 
+
+  $("#jumbo-button").trigger('click');
+  // alert("Hello"); 
+  console.log('switch');
+}, 3000);
+
+
+
+
+
+
+
   //end of edit
 
   // Styleguide swatch selector

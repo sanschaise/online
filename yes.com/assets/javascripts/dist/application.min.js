@@ -918,6 +918,21 @@ $(function() {
         $(".header__page-title--home").text(instructions[i_count%instructions.length]);
      
   });
+
+
+setInterval(function(){ 
+
+  $("#jumbo-button").trigger('click');
+  // alert("Hello"); 
+  console.log('switch');
+}, 3000);
+
+
+
+
+
+
+
   //end of edit
 
   // Styleguide swatch selector
@@ -1295,6 +1310,8 @@ $(function() {
     // var $cursor = $item.find('.mouse-cursor');
     // var $arrow = $item.find('.down-arrow');
 
+
+
     var animateSceneItem = function($item) {
       var $arrow = $item.find('.down-arrow');
       var $cursor = $item.find('.mouse-cursor');
@@ -1323,7 +1340,11 @@ $(function() {
 
             $button.css({ transitionDuration: '' });
 
+            console.log($item);
+
+            
             $sceneItems = $sceneItems.not($item);
+
 
             if ( $sceneItems.length ) {
               window.setTimeout(function() {
@@ -1331,7 +1352,9 @@ $(function() {
               }, 250);
             }
           }, 100);
+
         }, 50);
+        
       });
     };
 
