@@ -1,0 +1,55 @@
+// Font stacks
+$default: 'HelveticaNowText-Regular', 'Helvetica Neue', Helvetica, sans-serif;
+$light: 'HelveticaNowText-Light', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, sans-serif;
+
+// Body text
+@mixin body-text {
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-family: $default;
+
+  @include breakpoint(sm) {
+    font-size: 20px;
+  }
+}
+.body-text { @include body-text; }
+
+@mixin default-font {
+  @include body-text;
+}
+
+@mixin small-text {
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-family: $light;
+
+  strong {
+    font-family: $default;
+    font-weight: normal;
+  }
+
+  @include breakpoint(sm) {
+    font-size: 15px;
+  }
+}
+.small-text { @include small-text; }
+
+@mixin small-text-strong {
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-family: $default;
+
+  @include breakpoint(sm) {
+    font-size: 15px;
+  }
+}
+.small-text-strong { @include small-text-strong; }
+
+.small-text-strong-xs {
+  @include breakpoint(xs-sm) {
+    @include small-text-strong;
+  }
+}

@@ -1,0 +1,43 @@
+// Buttons
+
+.button {
+  text-align: center;
+  border: 1px solid;
+  border-radius: 11px;
+  padding: 8px 20px 8px;
+}
+
+.button--wide {
+  padding: 10px 80px 10px;
+}
+
+.button--jumbo {
+  width: 100%;
+  max-width: 286px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.button--super-jumbo {
+  width: 60vw;
+  height: 14vw;
+  line-height: 14vw;
+  font-size: 5.5vw;
+  padding: 0;
+  border-radius: 3.5vw;
+}
+
+.button--inline {
+  display: inline-block;
+}
+
+.square-button {
+  text-align: center;
+  border: 1px solid;
+  padding: 8px 20px 8px;
+}
+
+.psuedo-button {
+  border: 1px solid transparent;
+  padding: 8px 0 8px;
+}

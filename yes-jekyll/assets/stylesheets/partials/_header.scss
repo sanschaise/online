@@ -1,0 +1,212 @@
+// Header
+
+.header {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.header__page-title {
+  position: absolute;
+  top: 20px;
+  left: $gutter;
+  padding-right: 100px;
+  z-index: 1;
+
+  @include breakpoint(sm) {
+    left: $gutter * 2;
+    padding-right: 110px;
+  }
+}
+
+.header__page-title--home {
+  /*@include breakpoint(xs-sm) {*/
+    position: static;
+    padding-right: 0;
+    text-align: center;
+/*  }*/
+}
+
+.header__paintbucket-button,
+.hamburger {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.header__paintbucket-button {
+  margin-right: 35px;
+  display: inline-block;
+  transition: opacity 0.3s;
+
+  .is-viewing-nav & {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.hamburger {
+  position: absolute;
+  top: 11px;
+  right: 0;
+  width: 20px;
+  height: 14px;
+}
+
+.hamburger__line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $black;
+}
+
+.hamburger__line--1 {
+  top: 0;
+
+  .is-viewing-nav & {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+}
+
+.hamburger__line--2 {
+  top: 7px;
+
+  .is-viewing-nav & {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+}
+
+.hamburger__line--3 {
+  top: 14px;
+
+  .is-viewing-nav & {
+    display: none;
+  }
+}
+
+// Color palette
+
+.header__palette,
+.home__palette {
+/*  display: none;*/
+  position: relative;
+  background: $white;
+  border: 1px solid $black;
+  width: calc(100% - #{$gutter * 2});
+  max-width: 332px;
+  pointer-events: auto;
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  transition: opacity 0.3s;
+
+  .is-viewing-nav & {
+    opacity: 0 !important;
+    pointer-events: none;
+  }
+}
+
+.header__palette:after,
+.header__palette:before,
+.home__palette:after,
+.home__palette:before {
+  bottom: 100%;
+  left: calc(100% - 71px);
+  border: solid transparent;
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.header__palette:after,
+.home__palette:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: $white;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.header__palette:before,
+.home__palette:before {
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom-color: $black;
+  border-width: 11px;
+  margin-left: -11px;
+}
+
+.header__palette__swatches,
+.header__palette__description,
+.home__palette__swatches,
+.home__palette__description {
+  padding: $gutter;
+}
+
+.header__palette__swatches,
+.home__palette__swatches {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header__palette__swatch,
+.home__palette__swatch {
+  @include swatch;
+}
+
+.home__palette__swatch--preset-bank-1,
+.header__palette__swatch--preset-bank-1,
+.home__palette__swatch--preset-bank-2,
+.header__palette__swatch--preset-bank-2 {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.home__palette__swatch--preset-bank-1,
+.header__palette__swatch--preset-bank-1 {
+  background-image: url('assets/images/bank-icon-1@4x.png');
+}
+
+.home__palette__swatch--preset-bank-2,
+.header__palette__swatch--preset-bank-2 {
+  background-image: url('assets/images/bank-icon-2@4x.png');
+  width: 26px;
+}
+
+.header__palette__swatch--reset,
+.home__palette__swatch--reset {
+  border: 1px solid $black;
+}
+
+.header__palette__refresh,
+.home__palette__refresh {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  margin: auto 0;
+}
+
+.header__palette__description,
+.home__palette__description {
+  border-top: 1px solid $black;
+}
+
+// Home palette on mobile
+
+.home__palette {
+  position: relative;
+  top: 30px;
+  right: 0;
+  margin-bottom: 60px;
+
+  &:before,
+  &:after {
+    left: calc(50%);
+  }
+}
