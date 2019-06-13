@@ -1,0 +1,28 @@
+/*News ___________________________________________________________  */
+
+.header__news {
+  border-bottom: 1px solid;
+    height: 50px;
+
+}
+
+#news{
+	.section{
+		min-height:500px;
+		padding:100px;
+		
+
+		&:first-of-type{
+			padding-bottom:50px;
+		}
+
+		div{
+			max-width:600px;
+		}
+
+		p {
+			    text-align: justify;
+    			hyphens: auto;
+		}
+	}
+}
