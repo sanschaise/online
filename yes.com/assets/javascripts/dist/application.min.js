@@ -514,7 +514,7 @@ $(function() {
     if ( backgroundColorOnly || getRandomBool() ) {
       // A plain old background color
       var backgroundColor = getRandomHexColor();
-        styles.borderWidth= '1.5';
+        styles.borderWidth= '1.2';
         styles.borderColor ='rgba(0,0,0,0)'
       if ( lightOrDark( backgroundColor ) == 'dark' ) {
         styles.color = '#ffffff';
@@ -605,11 +605,11 @@ $(function() {
     minBorder = minBorder === undefined ? 0 : minBorder;
 
     if ( getRandomBool() ) {
-      styles.borderWidth = getRandomInt(minBorder, 2);
-      styles.borderWidth = 1.5;
+      // styles.borderWidth = getRandomInt(minBorder, 2);
+      styles.borderWidth = 1.2;
     } else {
-      styles.borderWidth = getRandomInt(minBorder, 3);
-      styles.borderWidth = 1.5;
+      // styles.borderWidth = getRandomInt(minBorder, 3);
+      styles.borderWidth = 1.2;
     }
 
     styles.borderStyle = 'solid';
@@ -910,7 +910,7 @@ $(function() {
   });
 
   //pedro edit
-  var instructions = [ "Login with your bank", "Verify ID with your bank", "Pay with your bank", "Skip forms with your bank" , "Sign documents with your bank" ];
+  var instructions = [ "Login with your bank", "Verify your Identity", "Pay with your bank", "Skip forms with your bank" , "Sign documents with your bank" ];
   var i_count = 0;
   $(document).on('click', '.yes-button', function() {
      var $swatches = $('#header__palette [data-swatch]');
