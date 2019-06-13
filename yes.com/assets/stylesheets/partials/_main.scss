@@ -261,3 +261,15 @@ a.button.button--inline.blank-link {
   user-select: none;
 }
 
+.fixed_height_box{
+      display: table-cell;
+    height: 60px;
+    width: 150px;
+    vertical-align: middle;
+
+}
+
+.yes-text{
+  position: relative;
+  left:1.4%;
+}
