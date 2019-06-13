@@ -468,6 +468,16 @@ $(function() {
        console.log("test");
        i_count++;
         $(".header__page-title--home").text(instructions[i_count%instructions.length]);
+
+        
+        slideshow = setInterval(function(){ 
+
+        $("#jumbo-button").trigger('click');
+        // alert("Hello"); 
+        console.log('switch');
+      }, 3000);
+
+
      
   });
 
