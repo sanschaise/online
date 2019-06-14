@@ -284,7 +284,7 @@ img {
 }
 
 .bank__graph__col__scene-item {
-  position: absolute;
+  position: static;
   opacity: 0;
   transition: opacity 1s;
 
@@ -398,7 +398,7 @@ img {
 
 [data-typewriter-set] {
   opacity: 0;
-  position: absolute;
+  position: static;
 
   &.active {
     opacity: 1;

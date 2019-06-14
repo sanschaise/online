@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>yes.com | styleguide</title>
+  <title>yes.com</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:image" content="assets/images/yes-open-graph.jpg" />
   <link id="favicon" rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="style.css?v=9" type="text/css">
+  <link rel="stylesheet" href="style.css?v=10" type="text/css">
   <script src="assets/javascripts/lib/modernizr.js"></script>
 </head>
 <body>
 
 
-  <header id="header" class="header">
+  <header id="header" class="header ">
     <div class="site-padding">
       <div class="container-fluid">
         <div class="col-sm-12 text-right">
@@ -60,6 +60,14 @@
   <nav id="nav" class="nav">
     <div class="site-padding height-100">
       <div class="container-fluid height-100">
+            <div class="container-fluid">
+      <div class="header__page-title header__page-title--styleguide">
+        <a href="./index.html" class="blank-link">
+<!--           yes<sup>®</sup><span class="hidden-xs"> this is a</span> styleguide -->
+                yes<sup>®</sup><span class="hidden-xs"> this is a</span> styleguide
+        </a>
+      </div>
+    </div>
         <div class="nav__row row">
           <div class="col-sm-12 text-right">
             <ul class="blank-list">
@@ -70,7 +78,10 @@
                 we have a <a href="styleguide" class="default-link">styleguide</a>
               </li>
               <li class="nav__list-item">
-                and a <a href="game.yes.com" class="default-link">game</a>
+                <a href="dev.yes.com" class="default-link">developer resources</a>
+              </li>
+              <li class="nav__list-item">
+                a <a href="game.yes.com" class="default-link">game</a>
               </li>
               <li class="nav__list-item">
                 we are in the <a href="news" class="default-link">news</a>
@@ -143,7 +154,7 @@
         </div>
         <div class="styleguide-swatch-selector__col styleguide-swatch-selector__col-3 hidden-xs">
           <div class="small-text-strong">
-            Use your own CSS to make the yes® look like any other button.
+            Use your own CSS to make the yes® button look like any other button.
           </div>
         </div>
       </div>
@@ -166,10 +177,13 @@
     <div class="">
       
         <div class="marquee small-text-strong">
+        	<a href="https://twitter.com/espiekermann" class="blank-link">
           <div class="marquee__frame">
-            <span class="marquee__text">Thank you Erik Spiekermann</span>
+            <span class="marquee__text">Thank you @espiekermann</span>
           </div>
+          </a>
         </div>
+
     </div>
 <!-- End of Marquee -->
 
@@ -177,10 +191,22 @@
 
     <section class="section section--centered-content text-center">
       <div class="styleguide__section-text mb-medium small-text-strong-xs">
-        Always provide context above or besides the yes® button. For example:
+        Always provide context above or besides the yes® button. <br> For example:
       </div>
-      <div class="small-text-strong mb-small">Login with your bank</div>
-      <div class="button button--wide button--jumbo yes-button small-text-strong-xs">yes<sup>®</sup></div>
+      <br>
+      <br>
+      <br>
+      <div class=" mb-small">Login with your bank</div>
+      <div class="button button--wide button--jumbo yes-button small-text-strong-xs mb-large">yes<sup>®</sup></div>
+      <br>
+      <br>
+
+
+      <div class="yes-group-left hidden-xs">
+	      <div class=" yes-left">Login with your bank</div>
+	      <div class="button button--wide button--jumbo yes-button small-text-strong-xs">yes<sup>®</sup></div>
+	  </div>
+
 
       <div class="section__number small-text-strong">3.</div>
     </section>
@@ -189,7 +215,7 @@
 
     <section class="section section--centered-content text-center">
       <div class="styleguide__section-text mb-medium small-text-strong-xs">
-        If legally required add context inside the button after yes®. For example:
+        If legally required add context inside the button after yes®. <br>For example:
       </div>
       <div class="button button--wide button--jumbo yes-button small-text-strong-xs">yes<sup>®</sup> I agree</div>
       <div class="section__number small-text-strong">4.</div>
@@ -251,36 +277,47 @@
       <div class="footer__col footer__col--right">
         <div class="footer__col--right__col footer__col--right__col--left">
 
-          <div class="mb-large footer__address">
+<!--           <div class="mb-large footer__address">
             Hafenstrasse 2<br>
             CH-8853 Lachen<br>
             Switzerland<br>
 
-          </div>
-          <div class="mb-tiny">
-            <a href="mailto:info@yes.com" class="default-link">info@yes.com</a>
-          </div>
-          <div class="mb-tiny">
-            <a href="http://example.org/" class="default-link"> Imprint</a>
-          </div>
+          </div> -->
+          <div class="mb-large">
+            <div class="mb-tiny">
+              <a href="mailto:info@yes.com" class="default-link">info@yes.com</a>
+            </div>
+            <div class="mb-tiny">
+              <a href="imprint" class="default-link"> Imprint</a>
+            </div>
+            <br>
         </div>
+          <div class="mb-tiny">
+              <a href="/" class="default-link">English</a>
+            </div>
+            <div class="mb-tiny">
+              <a href="de.yes.com" class="blank-link">Deutsche</a>
+            </div>
+         
+        </div>
+        
         <div class="footer__col--right__col footer__col--right__col--right">
           <div class="mb-large">
             <div class="mb-tiny">
-              <a href="./index.html" class="default-link">yes.com</a>
+              <a href="/" class="default-link">yes.com</a>
             </div>
             <div class="mb-tiny">
-              <a href="./styleguide.html" class="default-link">Style Guide</a>
+              <a href="styleguide" class="default-link">Style Guide</a>
             </div>
             <div class="mb-tiny">
               <a href="yes.game" class="default-link">Game</a>
             </div>
           </div>
           <div class="mb-tiny">
-            <a href="#privacy-policy" class="default-link">Privacy Policy</a>
+            <a href="privacy" class="default-link">Privacy Policy</a>
           </div>
           <div class="mb-tiny">
-            <a href="#dev-portal" class="default-link">Developer Portal</a>
+            <a href="dev.yes.com" class="default-link">Developer Resource</a>
           </div>
         </div>
       </div>

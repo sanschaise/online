@@ -1,0 +1,35 @@
+
+
+#Privacy, #Imprint{
+   // background:red;
+	.section{
+		padding:60px 20px;
+
+		div{
+			max-width:700px;
+
+			h1, h2{
+				@extend .mt-large;
+				@extend .mb-small;
+			}
+
+			p{
+				@extend .small-text;
+
+				width:100%;
+				hyphens: auto;
+			}
+		}
+
+
+	}
+
+}
+
+
+
+
+
+
+
+

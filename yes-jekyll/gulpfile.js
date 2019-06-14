@@ -18,7 +18,7 @@ gulp.task('css', function() {
   return gulp.src('assets/stylesheets/style.scss')
     .pipe(sass({outputStyle: 'expanded'})).on('error', sass.logError)
     .pipe(rename('style.css'))
-    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest('./'))
     .pipe(livereload())
     .on('error', onError);

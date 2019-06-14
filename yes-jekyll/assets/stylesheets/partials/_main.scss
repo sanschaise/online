@@ -30,8 +30,8 @@
 .section{
 	height:100%;
 	    transition: all 1s;
-      padding-top:100px;
-      padding-bottom:150px;
+      padding-top:80px;
+      padding-bottom:100px;
 }
 
 .default-link{
@@ -281,5 +281,9 @@ a.button.button--inline.blank-link {
     width: 600%;
 }
 
+
+.home__palette__description.small-text-strong {
+    line-height: 1.8;
+}
 
 

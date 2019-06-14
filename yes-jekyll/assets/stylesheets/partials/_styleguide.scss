@@ -5,6 +5,14 @@
 //   margin-bottom: 30px;
 // }
 
+#styleguide {
+  .section{
+    &:first-of-type{
+      margin-top: 75px;
+    }
+  }
+}
+
 .home__intro--styleguide {
   @include breakpoint(xs-sm) {
     @include small-text-strong;
@@ -50,7 +58,7 @@
 
 .styleguide-swatch-selector__col-3 {
   flex: 3;
-  padding: 10px;
+  padding: 20px;
   border-left: 1px solid $black;
 }
 
@@ -93,9 +101,31 @@
 }
 
 .styleguide__section-text {
-  max-width: 360px + ($gutter * 2);
+  max-width: 660px + ($gutter * 2);
   margin-left: auto;
   margin-right: auto;
   padding-left: $gutter;
   padding-right: $gutter;
 }
+
+.yes-group-left{
+
+  width:600px;
+  margin:auto;
+
+
+  .yes-left{
+    float: left;
+    margin-right: -20px;
+    padding: 22px 50px;
+  }
+
+  .yes-button{
+    float:left;
+    padding: 18px 100px;
+    width: fit-content;
+    margin-right:20px;
+  }
+}
+
+
