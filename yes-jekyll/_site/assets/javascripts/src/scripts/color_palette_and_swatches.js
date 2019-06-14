@@ -464,6 +464,14 @@ $(function() {
   var instructions = [ "Login with your bank", "Verify your Identity", "Pay with your bank", "Skip forms with your bank" , "Sign documents with your bank" ];
   var i_count = 0;
   $(document).on('click', '.yes-button, .header__paintbucket-button', function() {
+
+          var $swatches = $('#header__palette [data-swatch]');
+      var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
+      
+
+
+      $randomSwatch.trigger('click');
+       randomizeSwatches( $('[data-swatch]') );
      
        console.log("test");
        i_count++;
