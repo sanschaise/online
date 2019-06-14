@@ -293,11 +293,12 @@ a.button.button--inline.blank-link {
 progress-ring {
   position: absolute;
   top:4px;
-  right:50px;
+  right:40px;
 }
 
 
 .header__paintbucket-button {
+  margin-right:25px !important;
   img{
     position:relative;
     top:3px;

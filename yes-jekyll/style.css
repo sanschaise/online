@@ -2790,7 +2790,11 @@ a.button.button--inline.blank-link, a.button--inline.blank-link.rounded {
 progress-ring {
   position: absolute;
   top: 4px;
-  right: 50px;
+  right: 40px;
+}
+
+.header__paintbucket-button {
+  margin-right: 25px !important;
 }
 
 .header__paintbucket-button img {

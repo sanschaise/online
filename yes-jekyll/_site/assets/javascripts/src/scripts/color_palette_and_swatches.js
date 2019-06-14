@@ -371,7 +371,7 @@ $(function() {
 
   // Special case for preset swatches, e.g. to match a brand's styles
   $(document).on('click', '[data-preset-swatch]', function() {
-    stopSideshow()
+    paintPaused = true;
     var $swatch = $(this);
     var swatchStyleName = $swatch.attr('data-preset-swatch');
     var styles = {};
@@ -464,13 +464,7 @@ $(function() {
   var instructions = [ "Login with your bank", "Verify your Identity", "Pay with your bank", "Skip forms with your bank" , "Sign documents with your bank" ];
   var i_count = 0;
   $(document).on('click', '.yes-button, .header__paintbucket-button', function() {
-     var $swatches = $('#header__palette [data-swatch]');
-      var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
-      
-
-
-      $randomSwatch.trigger('click');
-       randomizeSwatches( $('[data-swatch]') );
+     
        console.log("test");
        i_count++;
         $(".header__page-title--home").text(instructions[i_count%instructions.length]);
@@ -496,11 +490,7 @@ $(function() {
       window.clearInterval(slideshow);
       slideshow = window.setInterval(ticker, 5000);
 
-      if (paintPaused) {
-        $("#playpause").attr("src","assets/images/play.svg");
-      } else {
-        $("#playpause").attr("src","assets/images/pause.svg");
-    }
+     
 
     });
 
@@ -509,7 +499,15 @@ $(function() {
 //   clearInterval(slideshow);
 // }
 var ticker = function() {
+
   if (paintPaused == false) {
+      var $swatches = $('#header__palette [data-swatch]');
+      var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
+      
+
+
+      $randomSwatch.trigger('click');
+       randomizeSwatches( $('[data-swatch]') );
   $("#jumbo-button").trigger('click');
   // alert("Hello"); 
   console.log('switch');
@@ -528,6 +526,7 @@ var slideshow = window.setInterval(ticker, 5000);
 
   // Styleguide swatch selector
   $(document).on('click', '[data-swatch-attribute]', function() {
+    paintPaused = true;
     var $swatch = $(this);
     var styles = $swatch.data('styles');
     var swatchAttribute = $swatch.attr('data-swatch-attribute');
