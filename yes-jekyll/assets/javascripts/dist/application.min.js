@@ -742,7 +742,7 @@ $(function() {
   var allStyleableElementSelectors = [
     '.styleable',
     '.button',
-    '.square-button'
+    // '.square-button'
   ];
 
   if ( Modernizr.svgclippaths ) {

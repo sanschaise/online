@@ -180,7 +180,7 @@
   cursor: alias;
 }
 
-.button {
+.button, .rounded {
   text-align: center;
   border: 1px solid;
   border-radius: 11px;
@@ -2345,8 +2345,7 @@ img {
   position: static;
 }
 
-.styleable,
-.button,
+.styleable, .button, .rounded,
 .square-button,
 .star {
   transition: all 0.4s;
@@ -2637,7 +2636,7 @@ section#section--customer {
   margin-top: 20px !important;
 }
 
-a.button.button--inline.blank-link {
+a.button.button--inline.blank-link, a.button--inline.blank-link.rounded {
   padding: 15px 25px;
 }
 
@@ -2736,7 +2735,7 @@ a.button.button--inline.blank-link {
   font-size: inherit;
 }
 
-.button.button--wide.button--jumbo.yes-button.small-text-strong-xs {
+.button.button--wide.button--jumbo.yes-button.small-text-strong-xs, .button--wide.button--jumbo.yes-button.small-text-strong-xs.rounded {
   font-size: inherit;
 }
 

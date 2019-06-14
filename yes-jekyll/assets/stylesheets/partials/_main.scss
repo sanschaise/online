@@ -286,4 +286,8 @@ a.button.button--inline.blank-link {
     line-height: 1.8;
 }
 
+.rounded {
+  @extend .button
+}
+
 
