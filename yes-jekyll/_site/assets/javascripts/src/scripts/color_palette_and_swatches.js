@@ -292,7 +292,8 @@ $(function() {
   var allStyleableElementSelectors = [
     '.styleable',
     '.button',
-    // '.square-button'
+    '.square-button',
+    '.rounded'
   ];
 
   if ( Modernizr.svgclippaths ) {
@@ -356,7 +357,7 @@ $(function() {
   // When a user clicks a swatch, all styleable elements are applied
   // with that swatch's styles.
   $(document).on('click', '[data-swatch]', function() {
-    stopSideshow()
+    // paintPaused = true;
     var $swatch = $(this);
     var styles = $swatch.data('styles');
 
@@ -462,39 +463,60 @@ $(function() {
   //pedro edit
   var instructions = [ "Login with your bank", "Verify your Identity", "Pay with your bank", "Skip forms with your bank" , "Sign documents with your bank" ];
   var i_count = 0;
-  $(document).on('click', '.yes-button', function() {
+  $(document).on('click', '.yes-button, .header__paintbucket-button', function() {
      var $swatches = $('#header__palette [data-swatch]');
       var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
-    
+      
+
+
       $randomSwatch.trigger('click');
        randomizeSwatches( $('[data-swatch]') );
        console.log("test");
        i_count++;
         $(".header__page-title--home").text(instructions[i_count%instructions.length]);
 
-
-        slideshow = setInterval(function(){ 
-
-        $("#jumbo-button").trigger('click');
-        // alert("Hello"); 
-        console.log('switch');
-      }, 5000);
+      //   if( paintPaused ){
+      //   slideshow = setInterval(function(){ 
+      //     paintPaused = true;
+      //   $("#jumbo-button").trigger('click');
+      //   // alert("Hello"); 
+      //   console.log('switch');
+      // }, 5000);
+      // } else {
+      //   stopSideshow();
+      // }
 
 
      
   });
 
-function stopSideshow() {
-  clearInterval(slideshow);
-}
+   $(document).on('click', '.header__paintbucket-button', function() {
+          paintPaused = !paintPaused;
+      console.log(paintPaused);
+      window.clearInterval(slideshow);
+      slideshow = window.setInterval(ticker, 5000);
 
+      if (paintPaused) {
+        $("#playpause").attr("src","assets/images/play.svg");
+      } else {
+        $("#playpause").attr("src","assets/images/pause.svg");
+    }
 
-var slideshow = setInterval(function(){ 
+    });
 
+// function stopSideshow() {
+//   paintPaused = false;
+//   clearInterval(slideshow);
+// }
+var ticker = function() {
+  if (paintPaused == false) {
   $("#jumbo-button").trigger('click');
   // alert("Hello"); 
   console.log('switch');
-}, 5000);
+  }
+};
+
+var slideshow = window.setInterval(ticker, 5000);
 
 
 

@@ -2572,7 +2572,7 @@ img {
 }
 
 .row {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .star__label {
@@ -2674,7 +2674,7 @@ a.button.button--inline.blank-link, a.button--inline.blank-link.rounded {
   position: relative;
   top: 2px;
   margin: 0px 5px;
-  margin-left: 35px;
+  margin-left: 25px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-filter: brightness(0%);
@@ -2695,7 +2695,7 @@ a.button.button--inline.blank-link, a.button--inline.blank-link.rounded {
   background-repeat: no-repeat;
   top: 5px;
   width: 24px;
-  margin-right: 20px;
+  margin-right: 10px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-filter: brightness(0%);
@@ -2785,6 +2785,18 @@ a.button.button--inline.blank-link, a.button--inline.blank-link.rounded {
 
 .home__palette__description.small-text-strong {
   line-height: 1.8;
+}
+
+progress-ring {
+  position: absolute;
+  top: 4px;
+  right: 50px;
+}
+
+.header__paintbucket-button img {
+  position: relative;
+  top: 3px;
+  left: 1px;
 }
 
 .header {

@@ -50,6 +50,11 @@ $(function() {
 
 
   var toggleColorPicker = function() {
+    var $swatches = $('#header__palette [data-swatch]');
+      var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
+
+      $randomSwatch.trigger('click');
+      
     if ( App.breakpoint.isMobile() ) {
 
       var $swatches = $('#header__palette [data-swatch]');
@@ -59,7 +64,7 @@ $(function() {
       return;
     } else {
       if ( isColorPickerOpen() ) {
-        closeColorPicker();
+        // closeColorPicker();
       } else {
         openColorPicker();
       }

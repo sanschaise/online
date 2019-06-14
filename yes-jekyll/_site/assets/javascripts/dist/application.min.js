@@ -742,7 +742,8 @@ $(function() {
   var allStyleableElementSelectors = [
     '.styleable',
     '.button',
-    // '.square-button'
+    '.square-button',
+    '.rounded'
   ];
 
   if ( Modernizr.svgclippaths ) {
@@ -806,7 +807,7 @@ $(function() {
   // When a user clicks a swatch, all styleable elements are applied
   // with that swatch's styles.
   $(document).on('click', '[data-swatch]', function() {
-    stopSideshow()
+    // paintPaused = true;
     var $swatch = $(this);
     var styles = $swatch.data('styles');
 
@@ -912,39 +913,60 @@ $(function() {
   //pedro edit
   var instructions = [ "Login with your bank", "Verify your Identity", "Pay with your bank", "Skip forms with your bank" , "Sign documents with your bank" ];
   var i_count = 0;
-  $(document).on('click', '.yes-button', function() {
+  $(document).on('click', '.yes-button, .header__paintbucket-button', function() {
      var $swatches = $('#header__palette [data-swatch]');
       var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
-    
+      
+
+
       $randomSwatch.trigger('click');
        randomizeSwatches( $('[data-swatch]') );
        console.log("test");
        i_count++;
         $(".header__page-title--home").text(instructions[i_count%instructions.length]);
 
-
-        slideshow = setInterval(function(){ 
-
-        $("#jumbo-button").trigger('click');
-        // alert("Hello"); 
-        console.log('switch');
-      }, 5000);
+      //   if( paintPaused ){
+      //   slideshow = setInterval(function(){ 
+      //     paintPaused = true;
+      //   $("#jumbo-button").trigger('click');
+      //   // alert("Hello"); 
+      //   console.log('switch');
+      // }, 5000);
+      // } else {
+      //   stopSideshow();
+      // }
 
 
      
   });
 
-function stopSideshow() {
-  clearInterval(slideshow);
-}
+   $(document).on('click', '.header__paintbucket-button', function() {
+          paintPaused = !paintPaused;
+      console.log(paintPaused);
+      window.clearInterval(slideshow);
+      slideshow = window.setInterval(ticker, 5000);
 
+      if (paintPaused) {
+        $("#playpause").attr("src","assets/images/play.svg");
+      } else {
+        $("#playpause").attr("src","assets/images/pause.svg");
+    }
 
-var slideshow = setInterval(function(){ 
+    });
 
+// function stopSideshow() {
+//   paintPaused = false;
+//   clearInterval(slideshow);
+// }
+var ticker = function() {
+  if (paintPaused == false) {
   $("#jumbo-button").trigger('click');
   // alert("Hello"); 
   console.log('switch');
-}, 5000);
+  }
+};
+
+var slideshow = window.setInterval(ticker, 5000);
 
 
 
@@ -1210,6 +1232,11 @@ $(function() {
 
 
   var toggleColorPicker = function() {
+    var $swatches = $('#header__palette [data-swatch]');
+      var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
+
+      $randomSwatch.trigger('click');
+      
     if ( App.breakpoint.isMobile() ) {
 
       var $swatches = $('#header__palette [data-swatch]');
@@ -1219,7 +1246,7 @@ $(function() {
       return;
     } else {
       if ( isColorPickerOpen() ) {
-        closeColorPicker();
+        // closeColorPicker();
       } else {
         openColorPicker();
       }
@@ -1254,6 +1281,77 @@ $(function() {
     if ( transitionTimer ) window.clearTimeout(transitionTimer);
   }
 });
+
+class ProgressRing extends HTMLElement {
+  constructor() {
+    super();
+    const stroke = this.getAttribute('stroke');
+    const radius = this.getAttribute('radius');
+    const normalizedRadius = radius - stroke * 2;
+    this._circumference = normalizedRadius * 2 * Math.PI;
+
+    this._root = this.attachShadow({mode: 'open'});
+    this._root.innerHTML = `
+      <svg
+        height="${radius * 2}"
+        width="${radius * 2}"
+        class="ProgressRing"
+       >
+         <circle
+           stroke="black"
+           stroke-dasharray="${this._circumference} ${this._circumference}"
+           style="stroke-dashoffset:${this._circumference}"
+           stroke-width="${stroke}"
+           fill="transparent"
+           r="${normalizedRadius}"
+           cx="${radius}"
+           cy="${radius}"
+        />
+      </svg>
+
+      <style>
+        circle {
+          transition: stroke-dashoffset 0.35s;
+          transform: rotate(-90deg);
+          transform-origin: 50% 50%;
+        }
+      </style>
+    `;
+  }
+  
+  setProgress(percent) {
+    const offset = this._circumference - (percent / 100 * this._circumference);
+    const circle = this._root.querySelector('circle');
+    circle.style.strokeDashoffset = offset; 
+  }
+
+  static get observedAttributes() {
+    return ['progress'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === 'progress') {
+      this.setProgress(newValue);
+    }
+  }
+}
+
+window.customElements.define('progress-ring', ProgressRing);
+
+var paintPaused = false;
+// emulate progress attribute change
+let progress = 0;
+const el = document.querySelector('progress-ring');
+
+const interval = setInterval(() => {
+  if (paintPaused == false) {
+  progress += 2;
+  el.setAttribute('progress', progress);
+} else {
+  progress= 0;
+}
+  
+}, 100);
 
 // Scroll up down buttons
 
