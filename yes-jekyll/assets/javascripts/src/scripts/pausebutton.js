@@ -65,10 +65,10 @@ const interval = setInterval(() => {
   if (paintPaused == false) {
   progress += 2;
   el.setAttribute('progress', progress);
-  $("#playpause").attr("src","assets/images/pause.svg");
+  $("#playpause").attr("src","/assets/images/pause.svg");
 } else {
   progress= 0;
-  $("#playpause").attr("src","assets/images/play.svg");
+  $("#playpause").attr("src","/assets/images/play.svg");
 }
   
 }, 100);

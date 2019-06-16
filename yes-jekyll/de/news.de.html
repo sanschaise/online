@@ -1,0 +1,40 @@
+---
+layout: default
+title: news
+permalink: de/news
+header: yes<sup>®</sup><span class="hidden-xs"> wir sind in den </span>news
+ref: news
+lang: de
+headerBorder: true
+---
+
+{% for article in site.news %}
+
+
+<!-- article -->
+
+<section class="section section--centered-content text-center">
+  <div class="small-text-strong-xs mb-small title">
+    {{article.title}}
+  </div>
+  <div class="mb-medium small-text">
+    {{ article.sub  }}
+    {{ article.content | markdownify }}
+  </div>
+  {% if article.cta %}
+  <a href="{{article.link}}" class="button button--inline blank-link">{{article.cta}}</a>
+  {% endif %}
+
+</section>
+
+  {% if forloop.last == false %}
+
+<hr>
+
+  {% endif %}
+
+
+<!-- end of article -->
+
+
+{% endfor %}

@@ -1,8 +1,8 @@
 ---
 title: Sparkassen and Volksbanken and Raiffeisenbanken start with yes® in the summer of 2019
 sub: 
-link: https://www.finextra.com/pressarticle/78648/signicat-and-yescom-collaborate-on-digital-identity-service-in-germany
-cta: Finextra.com
+link: 
+cta: 
 ---
 
 The Savings Banks Finance Group, together with the local cooperative banks, relies on yes®. Over 30 million online banking customers can use yes® without additional signup.
