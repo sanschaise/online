@@ -354,10 +354,14 @@ $(function() {
     resetStyleableElements();
   });
 
+
+
+
+
   // When a user clicks a swatch, all styleable elements are applied
   // with that swatch's styles.
   $(document).on('click', '[data-swatch]', function() {
-    // paintPaused = true;
+    paintPaused = true;
     var $swatch = $(this);
     var styles = $swatch.data('styles');
 
@@ -365,9 +369,11 @@ $(function() {
       console.warn('Could not find swatch style for swatch', $swatch);
       return;
     }
-
     performElementStyle(styles);
   });
+
+
+
 
   // Special case for preset swatches, e.g. to match a brand's styles
   $(document).on('click', '[data-preset-swatch]', function() {
@@ -514,9 +520,12 @@ var ticker = function() {
       
 
 
-      $randomSwatch.trigger('click');
+      // $randomSwatch.trigger('click');
+       styles = $randomSwatch.data('styles')
+      performElementStyle(styles);
+
        randomizeSwatches( $('[data-swatch]') );
-  $("#jumbo-button").trigger('click');
+  // $("#jumbo-button").trigger('click');
   // alert("Hello"); 
   console.log('switch');
   }

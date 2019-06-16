@@ -1,0 +1,188 @@
+en:
+
+  landing:
+    intro: The Open Banking Ecosystem
+    sub: Securely Connecting
+             <a href="#section--bank" class="default-link">Banks</a>, 
+             <a href="#section--apps-website" class="default-link">Apps, Websites</a> and their <a href="#section--customer">Customers</a>. 
+
+  marquee: 
+    banks: 1,000+ banks using yes® and counting.
+    game: Click here to play the form game.
+
+  banks:
+    title: yes® it's good for your bank
+    sub: Banks keep the customer interface and make money with premium service
+    leftTitle: 'no'
+    customer: Customer
+    TPP: Third Party Provider
+    passiveBank: Passive Bank
+    activeBank: Active Bank
+    merchant: Merchant
+
+  apps:
+    title: yes® it's good for apps & websites
+    sub: Free bank transfers and unique premium services
+    table: 
+      - title: Unique value added services
+        sub:
+          - 91-730 day Account Information
+          - Categorization, Analysis, Scores
+          - Verified Name, date/place of birth, Nationality, Adress, Email and Tel
+          - Electronic Signature (AES/QES), eID
+
+      - title: Higher Conversion
+        sub:
+          - Multi Service Consent
+          - Direct interaction with the bank
+
+      - title: Easy Integration
+        sub:
+          - Standardized yes® API cod EU banks
+          - Standardized Services
+          - Standardized Prices (virtual App Store)
+
+      - title: Free PSD2 services without AISP/PISP Certification
+        sub:
+          - Regulatory Shelter
+          - IBAN, Account Holder, 90 day Account Information
+          - SEPA Credit Transfer
+
+  customer:
+    title: yes® it's good for apps & websites
+    sub: yes®, simply sign in to apps and websites with your online banking login, verify your identity, sign documents or initiate payments
+    forExample: For example
+    mortgage: Getting a mortgage online
+    left:
+      title: Either
+      graph: 
+        - - Username*
+          - Password*
+        - Verify Email*
+        - Fill out Forms*
+        - Bank Information*
+        - Request Credit Score*
+        - Verify Identity*
+        - Video ID*
+        - Credit Card Number*
+        - Make Payment*
+        - Print Documents*
+        - Sign Documents*
+        - Mail Documents*
+    right:
+      title: Or
+      graph:
+        - Login to Bank
+        - - Bank Username
+          - Bank Password
+        - I agree
+    finish: Finish!
+
+
+
+
+de:
+
+  landing: 
+    intro: Das Ökosystem für Banken
+    sub: Sicheres Verbinden von
+             <a href="#section--bank" class="default-link">Banken</a>, 
+             <a href="#section--apps-website" class="default-link">Apps, Websites</a> und deren <a href="#section--customer">Kunden</a>. 
+
+  marquee: 
+    banks: 1,000+ Banken und es werden mehr. 
+    game: Klick hier für das Formularspiel.
+
+  banks:
+    title: yes® gut für Banken
+    sub: Banken behalten die Kundenschnittstelle und verdienen mit Mehrwertdoensten
+    leftTitle: 'Nein'
+    customer: Kunde
+    TPP: Drittdienstleister
+    passiveBank: Passiv Banken
+    activeBank: Aktiv Banken
+    merchant: Händler
+
+  apps:
+    title: yes® gut für Apps & Websites
+    sub: Gratis Banküberweisungen und einzigartige Mehrwertdienste
+    table: 
+      - title: Einzigartige Mehrwertdienste
+        sub:
+          - 91-730 Tage Kontoinformation
+          - Analyse, Kategorisierung und Scores
+          - Verifizierte Daten Name, Geburtsdatum und -ort, Anschrift, Email, Telefon
+          - Elektronische Unterschrift (AES/QES)
+          - Elektronische ID
+
+      - title: Höhere Konversion
+        sub:
+          - Eine Zustimmung für alle Dienste
+          - Direkte Interaktion mit der Bank ohne Drittdienstleister
+
+      - title: Einfache Integration
+        sub:
+          - Standardisierte yes® API
+          - Standardisierte Dienste
+          - Standardisierte Haftung
+          - Standardisierte Preise
+
+      - title: Gratis PSD2 Dienste ohne Zertifizierung als KID oder ZAD
+        sub:
+          - Regulatory Shelter
+          - IBAN, Kontoinhaber, 90 Tage Kontoinformation
+          - SEPA Credit Transfer
+
+  customer:
+    title: yes® ist gut für ihre kunden
+    sub: yes® einfach mit dem Online Banking Login bei Apps und Websites anmelden, Identität oder Bonität bestätigen, Dokumente unterschreiben oder Zahlungen
+    forExample: 'Ein Beispiel:'
+    mortgage: Eine Hypothek online bekommen
+    left:
+      title: Entweder
+      graph: 
+        - - Username*
+          - Passwort*
+        - Email bestätigen*
+        - Formulare ausfüllen*
+        - Bank Infornation*
+        - Bonität abfragen*
+        - Identität verifizieren*
+        - Video ID*
+        - Kreditkartennummer*
+        - Mzahlung auslösen*
+        - Dokumente ausdrucken*
+        - Dokumente unterschreiben*
+        - Dokumente verschicken*
+    right:
+      title: Oder
+      graph:
+        - Banken Login
+        - - Banken Username
+          - Banken Passwort
+        - ich stimme zu
+    finish: Fertig!
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+      

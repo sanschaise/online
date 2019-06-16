@@ -1,0 +1,36 @@
+en:
+  0:
+    intro: We look like you.
+    cssMessage: Use your own CSS to make the yes® button look like any other button.
+  1:
+    msg: The button must display the wordmark yes® with the registered trademark symbol all in lowercase letters
+    thanks: thank you @espiekermann
+  2:
+    msg: Always provide context above or besides the yes® button. 
+    context: Login with your Bank
+  3: 
+    msg: If legally required add context inside the button after yes®
+    agree: I agree
+  4: 
+    msg: That’s it!
+  forExample: 'For Example:'
+
+de:
+  0:
+   intro: Wir sehen aus wie Du.
+   cssMessage: Verwende Dein CSS damit der yes® so aussieht wie Deine Buttons.
+  1:
+    msg: Der Button muss die Wortmarke yes® in <br> Kleinbuchstaben zeigen
+    thanks: Danke @espiekermann
+  2:
+    msg: Stell Kontext über oder neben yes® Button her.
+    context: Banken Login
+  3: 
+    msg: Falls juristisch erforderlich ergänze eine Formulierung nach yes®
+    agree: ich stimme zu
+  4: 
+    msg: Das ist alles!
+  forExample: 'Zum Beispiel:'
+
+
+

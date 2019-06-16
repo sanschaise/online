@@ -2803,11 +2803,10 @@ progress-ring {
   left: 1px;
 }
 
-section#section--apps-website {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
+/*section#section--apps-website {
+  padding-top:50px;
+  padding-bottom:50px;
+}*/
 .header {
   position: absolute;
   top: 15px;

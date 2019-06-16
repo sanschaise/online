@@ -1,0 +1,72 @@
+en:
+  styleguide:
+    msg: We look like you. Use your own CSS and check out the
+    cta: Styleguide
+    url: styleguide
+  menu:
+    - cta: Developer Resources
+      url: developers
+    - cta: Styleguide
+      url: styleguide
+    - cta: News
+      url: news
+    - cta: Game
+      url: game
+    - cta: Privacy Policy
+      url: privacy
+    - cta: Imprint
+      url: imprint
+    - cta: Contact
+      url: "mailto:info@yes.com"
+
+  hire: yes® we are hiring! 
+  contact:
+    message: yes® we would love to hear from you.
+    cta: Get in touch!
+
+  links:
+    styleguide: Style Guide
+    game: Game
+    privacyPolicy: Privacy Policy
+    dev: Developer Resources
+    imprint: Imprint
+    news: News
+    about: About
+
+
+de:
+  styleguide:
+    msg: Wir sehen aus wie Du. Verwende Dein CSS und sieh Dir den
+    cta: Styleguide an
+    url: styleguide
+  menu:
+    - cta: Developer Resources
+      url: developers
+    - cta: Styleguide
+      url: styleguide
+    - cta: News
+      url: news
+    - cta: Spiel
+      url: game
+    - cta: Datenschutzerklärung
+      url: privacy
+    - cta: Imprint
+      url: imprint
+    - cta: Schreib uns
+      url: "mailto:info@yes.com"
+
+  hire: yes® wir stellen ein! 
+  contact:
+    message: yes® wir freuen uns, von Dir zu hören.
+    cta: Schreib uns!
+
+  links:
+    styleguide: Style Guide
+    game: Spiel
+    privacyPolicy: Privacy Policy
+    dev: Developer Resources
+    imprint: Imprint
+    news: News
+    about: About
+
+

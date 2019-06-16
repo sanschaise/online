@@ -1,0 +1,331 @@
+
+{% assign t = site.data[page.ref][page.lang] %}
+
+
+<section class="section section--home section--viewport section--centered-content">
+  <div class="site-padding">
+    <div class="container-fluid">
+      <div class="header__page-title header__page-title--home">
+
+       {{ t.landing.intro }}
+
+     </div>
+   </div>
+ </div>
+
+ <div id="jumbo-button" class="button button--wide button--super-jumbo mt-medium yes-button" ><span class="yes-text">yes®<span></div>
+  <!-- jumbo button -->
+  <div id="home__palette" class="home__palette text-center" data-swatch-parent>
+    <div class="home__palette__swatches">
+      <div class="home__palette__swatch home__palette__swatch--reset" data-swatch-reset></div>
+      <div class="home__palette__swatch home__palette__swatch--preset-bank-1" data-preset-swatch="bank1"></div>
+      <div class="home__palette__swatch home__palette__swatch--preset-bank-2" data-preset-swatch="bank2"></div>
+      <div class="home__palette__swatch" data-swatch></div>
+      <div class="home__palette__swatch" data-swatch></div>
+      <div class="home__palette__swatch" data-swatch></div>
+      <img id="home__palette__refresh" class="home__palette__refresh" data-swatch-refresh src="assets/images/refresh.svg" alt="Click the icon to refresh the color palette options.">
+    </div>
+    <div class="home__palette__description small-text-strong">
+     {{ t.landing.sub }}
+   </div>
+ </div>
+ <img id="home__carrot" class="home__carrot" src="assets/images/carrot-down.svg" alt="Click the carrot to scroll down the page.">
+
+</section>
+<!-- Marqee -->
+<div class="">
+
+  <div id="section--bank" class="marquee small-text-strong">
+    <div class="marquee__frame">
+      <span class="marquee__text"> {{ t.marquee.banks }} <span class="sp-logo"></span> <span class="vr-logo"></span></span>
+    </div>
+  </div>
+</div>
+<!-- End of Marquee -->
+
+
+
+<!-- Section -->
+
+<section  class="section text-center">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="mb-small">{{t.banks.title}}</h2>
+        <div class="small-text mb-medium mb-large-sm" >
+          {{t.banks.sub}}
+        </div>
+        <div id="bank__graph" class="bank__graph">
+          <div class="bank__graph__col bank__graph__col--left bank__graph__col__scene-item-wrapper">
+            <div>{{t.banks.leftTitle}}</div>
+            <br>
+            <!--  <div class="down-line"></div> -->
+            <div class="bank__graph__col__scene-item">
+              <div class="rounded rounded-button small-text-strong">{{t.banks.customer}}</div>
+              <div class="down-arrow"></div>
+            </div>
+            <div class="bank__graph__col__scene-item">
+              <div class="bank__third-party-services">
+                <div class="square-button small-text-strong fixed_height_box">{{t.banks.TPP}}
+                     <!--  <div class="bank__inside visible-xs  dashed small-text-strong">
+                      Bank
+                    </div> -->
+                  </div>
+
+
+                  <div class="bank__third-party-services__bank hidden-xs">
+                    <div class="bank__third-party-services__bank__button square-button dashed small-text-strong fixed_height_box">{{t.banks.passiveBank}}</div>
+                    <img class="bank__third-party-services__left-right-arrow left-right-arrow" src="assets/images/arrow-left-right.svg">
+                  </div>
+                </div>
+                <div class="down-arrow"></div>
+              </div>
+ <!--                <div class="bank__graph__col__scene-item">
+                  <div class="square-button small-text-strong">Aggregation</div>
+                  <div class="down-arrow"></div>
+                </div>
+                <div class="bank__graph__col__scene-item">
+                  <div class="square-button small-text-strong">Analysis</div>
+                  <div class="down-arrow"></div>
+                </div>
+                <div class="bank__graph__col__scene-item">
+                  <div class="square-button small-text-strong">Credit</div>
+                  <div class="down-arrow"></div>
+                </div>
+                <div class="bank__graph__col__scene-item">
+                  <div class="square-button small-text-strong">QTSB</div>
+                  <div class="down-arrow"></div>
+                </div> -->
+                <div class="bank__graph__col__scene-item bank__graph__col__scene-item--last">
+                  <div class="star">
+                    <!-- <img class="star__image" src="assets/images/star.svg"> -->
+                    <!--             <div class="star__label small-text-strong">App or website!</div> -->
+                    <div class="rounded small-text-strong">{{t.banks.merchant}}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="bank__graph__col bank__graph__col--right bank__graph__col__scene-item-wrapper">
+                <div><span class="yes-text">yes®</span></div>
+                <br>
+                <!-- <div class="down-line"></div> -->
+                <div class="bank__graph__col__scene-item">
+                  <div class="rounded small-text-strong">{{t.banks.customer}}</div>
+                  <div class="down-arrow"></div>
+                </div>
+                <div class="bank__graph__col__scene-item">
+                  <div class="square-button small-text-strong fixed_height_box">{{t.banks.activeBank}}</div>
+                  <div class="down-arrow"></div>
+                </div>
+                <div class="bank__graph__col__scene-item bank__graph__col__scene-item--last">
+                  <div class="star">
+                    <!--             <img class="star__image" src="assets/images/star.svg"> -->
+                    <div class="rounded small-text-strong">{{t.banks.merchant}}</div>
+                    <!--      <div class="star__label small-text-strong">App or website!</div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--       <div id="customer__banks-using-yes-container " class="customer__banks-using-yes-container site-container mb-medium hidden-xs">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 text-right">
+              <div class="customer__banks-using-yes small-text text-center">
+                <strong>1,231 banks<br class="visible-xs"> using yes<sup>®</sup> and<br>counting…</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="banks-counting-end-point"></div> -->
+    </section>
+
+    <hr>
+
+
+    <!-- End of Section -->
+
+
+    <!-- Section -->
+    <section id="section--apps-website" class="section text-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="mb-small">{{t.apps.title}}</h2>
+            <div class="small-text mb-medium mb-large-sm">
+              {{t.apps.sub}}
+            </div>
+            <div class="apps-websites__graph">
+              {% for item in t.apps.table %}
+
+              <div class="apps-websites__graph__title apps-websites__graph__title--first">
+                {{item.title}}
+              </div>
+
+              {% for sub in item.sub %}
+
+              <div class="apps-websites__graph__row row">
+                <div class="col-sm-7 text-left">
+                  <div class="small-text-strong"> {{sub}}
+                  </div>
+                </div>
+                <div class="apps-websites__graph__row__features col-sm-5">
+                  <div class="one-quarter small-text-strong">yes<sup>®</sup></div>
+                </div>
+              </div>
+
+
+              {% endfor %}
+
+              <br>
+
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End of Section -->
+    <!-- Marqee -->
+    <div class="">
+      <a href="game" class="blank-link">
+        <div class="marquee small-text-strong">
+          <div class="marquee__frame">
+            <span class="marquee__text">{{t.marquee.game}}</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- End of Marquee -->
+
+
+
+    <!-- Section -->
+    <section id="section--customer" class="section text-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="mb-small">
+              {{t.customer.title}}
+            </h2>
+            <div class="section__description-area small-text mb-medium mb-large-sm" style="max-width: 480px; margin-left: auto; margin-right: auto;">
+              {{t.customer.sub}}
+            </div>
+            <div class="small-text-strong mb-tiny">
+              {{t.customer.forExample}}
+            </div>
+            <h3 class="mb-xlarge">
+              {{t.customer.mortgage}}
+            </h3>
+            <div id="customer__graph" class="customer__graph">
+
+
+              <!-- left graph -->
+
+              <div class="customer__graph__col customer__graph__col--left" data-typewriter-set-wrapper>
+                <div>{{t.customer.left.title}}</div>
+                <!-- <div class="down-line"></div> -->
+                <br>
+                <br>
+
+                <!-- loop -->
+
+                {% for item in t.customer.left.graph %}
+                <div data-typewriter-set>
+                  {% if forloop.first == false %}
+                    <div class="down-arrow"></div>
+                  {% endif %}
+                  
+                  {% for typed in item %}
+                  <div class="small-text-strong">
+                    <span data-typewriter>{{typed}}</span>
+                  </div>
+                  {% endfor %}
+
+                </div>
+                {% endfor %}
+
+                <!-- end of loop -->
+
+                <div data-typewriter-set data-typewriter-complete>
+                  <div class="down-line"></div>
+                  <div class="star">
+                   <!--          <img class="star__image" src="assets/images/star.svg"> -->
+                   <br>
+                   <div class="star__label small-text-strong">{{t.customer.finish}}
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+
+             <!-- right graph -->
+
+             <div id="customer__graph__col--right" class="customer__graph__col customer__graph__col--right">
+              <div>
+                {{ t.customer.right.title }}
+              </div>
+              <br>
+              <br>
+              <div class="customer__graph__col--right__scene__item">
+               <div class="small-text-strong mb-tiny"> 
+                {{ t.customer.right.graph[0] }}
+              </div>
+               <div class="button-mouse-wrapper">
+                <div class="button yes-button"><span class="yes-text">yes®</span></div>
+                <img src="assets/images/mouse@2x.png" class="mouse-cursor">
+              </div>
+              <div class="down-arrow"></div>
+            </div>
+
+
+            <div class="customer__graph__col--right__scene__item">
+              <div class="small-text-strong mb-tiny">
+                {{ t.customer.right.graph[1][0] }}
+                <span class="required">*</span>
+                {{ t.customer.right.graph[1][1] }}
+                <span class="required">*</span>
+              </div>
+              <div class="button-mouse-wrapper">
+
+                <span  class="mouse-cursor">
+                </span>
+                <div class="down-arrow"></div>
+              </div>
+            </div>
+
+
+
+            <div class="customer__graph__col--right__scene__item">
+              <div class="small-text-strong mb-tiny">{{t.customer.right.graph[2]}}
+              </div>
+              <div class="button-mouse-wrapper">
+                <div class="button yes-button"><span class="yes-text">yes®</span></div>
+                <img src="assets/images/mouse@2x.png" class="mouse-cursor">
+              </div>
+
+            </div>
+
+            <div class="customer__graph__col--right__scene__item">
+              <div class="down-line"></div>
+              <div class="star">
+                <!--               <img class="star__image" src="assets/images/star.svg"> -->
+                <br>
+                <div class="star__label small-text-strong">
+                  {{t.customer.finish}}
+                </div>
+              </div>
+            </div>
+            <div id="banks-counting-start-point"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
