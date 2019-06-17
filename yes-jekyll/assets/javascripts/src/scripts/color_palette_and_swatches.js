@@ -467,20 +467,29 @@ $(function() {
   });
 
   //pedro edit
-  var instructions = [ "Login with your bank", "Verify your Identity", "Pay with your bank", "Skip forms with your bank" , "Sign documents with your bank" ];
+  
   var i_count = 0;
-  $(document).on('click', '.yes-button, .header__paintbucket-button', function() {
+  $(document).on('click', '.yes-button', function() {
 
           var $swatches = $('#header__palette [data-swatch]');
       var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
       
+      var styles = $randomSwatch.data('styles');
 
+      if ( typeof styles === 'undefined' ) {
+        console.warn('Could not find swatch style for swatch', $swatch);
+        return;
+      }
+    performElementStyle(styles);
 
-      $randomSwatch.trigger('click');
+      // $randomSwatch.trigger('click');
        randomizeSwatches( $('[data-swatch]') );
      
        console.log("test");
        i_count++;
+
+
+
         $(".header__page-title--home").text(instructions[i_count%instructions.length]);
 
       //   if( paintPaused ){
@@ -500,6 +509,7 @@ $(function() {
 
    $(document).on('click', '.header__paintbucket-button', function() {
           paintPaused = !paintPaused;
+
       console.log(paintPaused);
       window.clearInterval(slideshow);
       slideshow = window.setInterval(ticker, 5000);

@@ -59,8 +59,13 @@
 <div class="site-padding">
   <div class="container-fluid">
     <div class="header__page-title header__page-title--styleguide">
-      <a href="{{page.url}}" class="blank-link">
-        <!--           yes<sup>®</sup><span class="hidden-xs"> this is a</span> styleguide -->
+      <a href="{% if page.lang == 'en' %}
+              /
+              {% endif %}
+               {% if page.lang == 'de' %}
+              /de
+              {% endif %}" class="blank-link">
+
         {{ page.header }}
       </a>
     </div>
@@ -73,7 +78,7 @@
       <div class="container-fluid">
         <div class="header__page-title header__page-title--styleguide">
           <a href="./index.html" class="blank-link">
-            <!--           yes<sup>®</sup><span class="hidden-xs"> this is a</span> styleguide -->
+        
             {{ page.header }}
           </a>
         </div>
@@ -122,13 +127,13 @@
           <div class="nav__bottom-col col-sm-12 text-right">
           {% if page.lang == 'de' %}
           <div class="mb-tiny">
-            <a href="/{{page.ref}}" class="blank-link">English</a>
+            <a href="{{page.en-url}}" class="default-link">English</a>
           </div>
           {% endif %}
 
           {% if page.lang == 'en' %}
           <div class="mb-tiny">
-            <a href="/de/{{page.url}}" class="default-link">Deutsch</a>
+            <a href="{{page.de-url}}" class="default-link">Deutsch</a>
           </div>
           {% endif %}
           </div>
@@ -183,7 +188,7 @@
     </div>
     <div id="back-to-top-button" class="visible-xs mt-small mb-large small-text-strong text-center">
       <img src="/assets/images/to-top-carrot.svg">
-      <div class="mt-tiny">back to top</div>
+      <div class="mt-tiny">{{general.backToTop}}</div>
     </div>
     <div class="footer__col footer__col--right">
       <div class="footer__col--right__col footer__col--right__col--left">
@@ -196,13 +201,13 @@
           </div> -->
           {% if page.lang == 'de' %}
           <div class="mb-tiny">
-            <a href="/{{page.ref}}" class="blank-link">English</a>
+            <a href="/{{page.en-url}}" class="default-link">English</a>
           </div>
           {% endif %}
 
           {% if page.lang == 'en' %}
           <div class="mb-tiny">
-            <a href="/de/{{page.url}}" class="default-link">Deutsch</a>
+            <a href="{{page.de-url}}" class="default-link">Deutsch</a>
           </div>
           {% endif %}
 
@@ -242,5 +247,6 @@
       {% if page.slideshow == true %}  
       <script>  paintPause = false; </script>  
       {% endif %}
+
     </body>
     </html>

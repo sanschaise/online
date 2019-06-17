@@ -15,7 +15,7 @@ en:
     - cta: Privacy Policy
       link: privacy
     - cta: Imprint
-      link: imprint
+      link: de/impressum
     - cta: Contact
       link: "mailto:info@yes.com"
 
@@ -23,6 +23,8 @@ en:
   contact:
     message: yes® we would love to hear from you.
     cta: Get in touch!
+
+  backToTop: back to top
 
   links:
     styleguide: Style Guide
@@ -59,6 +61,8 @@ de:
   contact:
     message: yes® wir freuen uns, von Dir zu hören.
     cta: Schreib uns!
+
+  backToTop: Zurück zum Anfang
 
   links:
     styleguide: Style Guide
