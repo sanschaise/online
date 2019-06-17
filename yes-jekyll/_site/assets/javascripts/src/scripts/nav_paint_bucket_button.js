@@ -58,10 +58,10 @@ $(function() {
       
     if ( App.breakpoint.isMobile() ) {
 
-      var $swatches = $('#header__palette [data-swatch]');
-      var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
+      // var $swatches = $('#header__palette [data-swatch]');
+      // var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
 
-      $randomSwatch.trigger('click');
+      // $randomSwatch.trigger('click');
       return;
     } else {
       if ( isColorPickerOpen() ) {

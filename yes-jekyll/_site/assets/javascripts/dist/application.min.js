@@ -1266,10 +1266,10 @@ $(function() {
       
     if ( App.breakpoint.isMobile() ) {
 
-      var $swatches = $('#header__palette [data-swatch]');
-      var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
+      // var $swatches = $('#header__palette [data-swatch]');
+      // var $randomSwatch = $( $swatches[Math.floor(Math.random()*$swatches.length)] );
 
-      $randomSwatch.trigger('click');
+      // $randomSwatch.trigger('click');
       return;
     } else {
       if ( isColorPickerOpen() ) {
@@ -1364,7 +1364,8 @@ class ProgressRing extends HTMLElement {
 }
 
 window.customElements.define('progress-ring', ProgressRing);
-
+var url_root = $('#root_url').text();
+console.log(url_root);
 var paintPaused = false;
 // emulate progress attribute change
 let progress = 0;
@@ -1376,10 +1377,10 @@ const interval = setInterval(() => {
   if (paintPaused == false) {
   progress += 2;
   el.setAttribute('progress', progress);
-  $("#playpause").attr("src","/assets/images/pause.svg");
+  $("#playpause").attr("src",url_root+"/assets/images/pause.svg");
 } else {
   progress= 0;
-  $("#playpause").attr("src","/assets/images/play.svg");
+  $("#playpause").attr("src",url_root+"/assets/images/play.svg");
 }
   
 }, 100);
