@@ -1058,42 +1058,42 @@ $(function() {
   $(window).trigger('scroll.elementsInViewport');
 });
 
-// External links
+// // External links
 
-$(function() {
-  var documentHost = document.location.href.split('/')[2];
-  var internalLinkExceptions = ['mailto:', 'tel:', 'sms:'];
+// $(function() {
+//   var documentHost = document.location.href.split('/')[2];
+//   var internalLinkExceptions = ['mailto:', 'tel:', 'sms:'];
 
-  var isExternalLink = function($el) {
-    var href = $el.attr('href');
-    var link = $el.get(0).href;
-    var linkHost = link.split('/')[2];
-    var internalLinkMatches = $.map(internalLinkExceptions, function(d) {
-      if ( href ) {
-        return href.indexOf(d) != -1;
-      } else {
-        return true;
-      }
-    });
+//   var isExternalLink = function($el) {
+//     var href = $el.attr('href');
+//     var link = $el.get(0).href;
+//     var linkHost = link.split('/')[2];
+//     var internalLinkMatches = $.map(internalLinkExceptions, function(d) {
+//       if ( href ) {
+//         return href.indexOf(d) != -1;
+//       } else {
+//         return true;
+//       }
+//     });
 
-    return linkHost != documentHost && ( $.inArray(true, internalLinkMatches) === -1 );
-  };
+//     return linkHost != documentHost && ( $.inArray(true, internalLinkMatches) === -1 );
+//   };
 
-  $('a').each(function() {
-    var $link = $(this);
+//   $('a').each(function() {
+//     var $link = $(this);
 
-    if ( isExternalLink($link) ) {
-      var target = $link.attr('target');
+//     if ( isExternalLink($link) ) {
+//       var target = $link.attr('target');
 
-      if ( !target ) {
-        target = '_blank';
-      }
+//       if ( !target ) {
+//         // target = '_blank';
+//       }
 
-      $link.attr('target', '_blank')
-           .addClass('external-link');
-    }
-  });
-});
+//       $link.attr('target', '_blank')
+//            .addClass('external-link');
+//     }
+//   });
+// });
 
 
 // Marquee
