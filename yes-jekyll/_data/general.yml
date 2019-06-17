@@ -7,11 +7,11 @@ en:
     - cta: Developer Resources
       link: developers
     - cta: Styleguide
-      link: styleguide
+      link: /styleguide/
     - cta: News
-      link: news
+      link: /news/
     - cta: Game
-      link: game
+      link: /game
     - cta: Privacy Policy
       link: privacy
     - cta: Imprint
